@@ -1,0 +1,54 @@
+/** @format */
+@use "./base/reset";
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
+:root {
+	--icon-color: #9b9591;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.app-wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	.app-content {
+		flex: 1;
+	}
+}
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+main {
+	min-height: 100vh;
+}

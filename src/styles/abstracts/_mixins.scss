@@ -1,0 +1,80 @@
+/** @format */
+@use "./variables" as *;
+@use "sass:map";
+
+/* Min-width (mobile → up) */
+@mixin up($size) {
+	@if map.has-key($breakpoints, $size) {
+		@media (min-width: map.get($breakpoints, $size)) {
+			@content;
+		}
+	} @else {
+		@error "Unknown breakpoint: #{$size}";
+	}
+}
+
+/* Max-width (desktop → down) */
+@mixin down($size) {
+	@if map.has-key($breakpoints, $size) {
+		@media (max-width: map.get($breakpoints, $size) - 1) {
+			@content;
+		}
+	} @else {
+		@error "Unknown breakpoint: #{$size}";
+	}
+}
+
+/* Between two sizes */
+@mixin between($min, $max) {
+	@if map.has-key($breakpoints, $min) and map.has-key($breakpoints, $max) {
+		@media (min-width: map.get($breakpoints, $min)) and (max-width: map.get($breakpoints, $max) - 1) {
+			@content;
+		}
+	} @else {
+		@error "Unknown breakpoint: #{$min} or #{$max}";
+	}
+}
+
+/* FLEX */
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-end {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+@mixin flex-start {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+@mixin flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* BUTTON */
+@mixin button {
+	@include flex-center;
+	width: 320px;
+	height: 65px;
+	background-color: $menuitem-color;
+	color: $color-bg;
+	font-size: $font-size-md;
+	font-weight: $font-weight-bold;
+	border: none;
+	border-radius: $radius-md;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		filter: brightness(0.9);
+	}
+}

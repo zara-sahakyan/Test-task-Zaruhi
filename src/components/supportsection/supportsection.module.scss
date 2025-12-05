@@ -1,0 +1,57 @@
+/** @format */
+
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.quick-links {
+	@include flex-center;
+	gap: 13rem;
+	padding: 20px 0;
+	margin: 55px 0;
+
+	@include down(lg) {
+		gap: 63px;
+		max-width: 90%;
+		margin: 30px auto;
+	}
+
+	@include down(sm) {
+		gap: 25px;
+	}
+
+	&__item {
+		@include flex-center;
+		flex-direction: column;
+		text-decoration: none;
+		cursor: pointer;
+		transition: transform 0.25s ease, opacity 0.2s ease;
+
+		&:hover {
+			transform: translateY(-5px);
+			opacity: 0.9;
+		}
+	}
+
+	&__icon {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 10px;
+		object-fit: contain;
+
+		@include down(sm) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	&__text {
+		font-size: $font-size-lg;
+		font-weight: $font-weight-bold;
+		color: $color-primary;
+		text-align: center;
+
+		@include down(lg) {
+			font-size: $font-size-sm;
+		}
+	}
+}

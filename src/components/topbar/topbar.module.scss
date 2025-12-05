@@ -1,0 +1,40 @@
+/** @format */
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.topbar {
+	@include flex-between;
+	margin-top: 10px;
+	flex-direction: column;
+	align-items: flex-start;
+
+	&__left {
+		@include flex-start;
+		gap: 1rem;
+		width: 62%;
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		margin-top: 15px;
+	}
+
+	@include up(sm) {
+		&__left {
+			gap: 2.8rem;
+		}
+	}
+	@include up(lg) {
+		flex-direction: row;
+		align-items: center;
+
+		&__menu {
+			margin-top: 0;
+		}
+
+		&__left {
+			width: 43.5%;
+		}
+	}
+}

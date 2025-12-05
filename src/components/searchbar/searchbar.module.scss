@@ -1,0 +1,51 @@
+/** @format */
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.search {
+	@include flex-center;
+	border: 1px solid $color-bg-gray;
+	background-color: $color-bg-gray;
+	border-radius: $radius-sm;
+	padding: 5px 10px;
+	height: 45px;
+	width: 100%;
+	min-width: 180px;
+
+	@include up(sm) {
+		padding: 5px 15px;
+		min-width: 260px;
+	}
+
+	&__input {
+		border: none;
+		outline: none;
+		flex: 1;
+		font-size: $font-size-xxsm;
+		background: transparent;
+
+		@include up(sm) {
+			font-size: $font-size-xsm;
+		}
+	}
+
+	i {
+		font-size: $font-size-sm;
+		color: $icon-color;
+		margin-right: 10px;
+
+		@include up(sm) {
+			font-size: $font-size-bg-lg;
+		}
+	}
+
+	&::placeholder {
+		color: $icon-color;
+		opacity: 0.8;
+		font-size: $font-size-xxsm;
+
+		@include up(sm) {
+			font-size: $font-size-sm;
+		}
+	}
+}

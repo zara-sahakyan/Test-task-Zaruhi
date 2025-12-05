@@ -1,0 +1,69 @@
+/** @format */
+
+:root {
+	--icon-color: $icon-color;
+}
+// Colors
+$color-primary: #212121;
+$color-black: #000000;
+$extra-black: #1b1b1b;
+$color-bg: #ffffff;
+$menuitem-color: #4859f0;
+$hover-btn-color: #1f2670;
+$color-bg-gray: #f5f5f5;
+$color-dot-gray: #a9adce;
+$icon-color: #9b9591;
+$shadow-color: #21212159;
+$footer-title: #6f6f6f;
+$border-color-footer: #ffffff66;
+$gray: #c4c4c4;
+
+// Typography
+$font-family-base: "Inter", Arial, sans-serif;
+$line-height-base: 1.5;
+
+// Font sizes
+$font-size-extra-sm: 8px;
+$font-size-xxsm: 12px;
+$font-size-xsm: 14px;
+$font-size-sm: 16px;
+$font-size-smm: 18px;
+$font-size-pre-md: 20px;
+$font-size-md: 22px;
+$font-size-lg: 25px;
+$font-size-bg-lg: 30px;
+$font-size-bg-xlg: 35px;
+$font-size-xl: 46px;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+//Border colors
+$menuitem-border: #c8cdfc;
+$nav-border: #cdcac8;
+
+// Border radius
+$radius-xsm: 4px;
+$radius-sm: 8px;
+$radius-smm: 11px;
+$radius-md: 16px;
+$radius-lg: 20px;
+$radius-xlg: 25px;
+$radius-rounded: 50%;
+
+// Gradients
+$main-gradient: linear-gradient(
+	110deg,
+	rgb(10 19 95) 12.49%,
+	rgba(49, 59, 152, 0.51) 84.84%
+);
+
+// Breakpoints
+$breakpoints: (
+	sm: 480px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1440px,
+);

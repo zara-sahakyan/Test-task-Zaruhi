@@ -1,0 +1,79 @@
+/** @format */
+@use "../../styles/abstracts/variables" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+	color: inherit;
+}
+
+input,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+	border: none;
+	outline: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+fieldset {
+	border: none;
+}
+
+body {
+	line-height: $line-height-base;
+	font-family: $font-family-base;
+	background-color: $color-bg;
+	color: $color-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}

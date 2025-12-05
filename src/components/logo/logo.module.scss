@@ -1,0 +1,14 @@
+/** @format */
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.logo {
+	&__img {
+		max-width: 95px;
+		height: auto;
+
+		@include up(sm) {
+			max-width: 106px;
+		}
+	}
+}

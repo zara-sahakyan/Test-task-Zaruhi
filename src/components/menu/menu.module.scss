@@ -1,0 +1,84 @@
+/** @format */
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.menu {
+	&__list {
+		@include flex-center;
+		gap: 0.5rem;
+
+		@include up(sm) {
+			gap: 1.5rem;
+		}
+	}
+
+	&__item {
+		@include flex-center;
+		gap: 6px;
+
+		@include up(sm) {
+			gap: 8px;
+		}
+	}
+
+	&__link {
+		@include flex-center;
+		color: $color-primary;
+		position: relative;
+
+		&:hover {
+			color: $menuitem-color;
+		}
+
+		&:hover .menu__icon::before {
+			color: $menuitem-color;
+		}
+	}
+
+	&__iconWrapper {
+		position: relative;
+		display: inline-block;
+	}
+
+	&__icon {
+		font-size: $font-size-xsm;
+		color: $icon-color;
+		margin-right: 4px;
+
+		@include up(sm) {
+			font-size: $font-size-lg;
+			margin-right: 8px;
+		}
+	}
+
+	&__badge {
+		@include flex-center;
+		position: absolute;
+		top: -8px;
+		right: -5px;
+		background: $menuitem-color;
+		border: 2px solid $menuitem-border;
+		color: $color-bg;
+		font-size: $font-size-extra-sm;
+		font-weight: bold;
+		border-radius: $radius-rounded;
+		width: 18px;
+		height: 18px;
+		z-index: 3;
+
+		@include up(sm) {
+			top: -13px;
+			width: 20px;
+			height: 20px;
+			font-size: $font-size-xxsm;
+		}
+	}
+
+	&__text {
+		font-size: $font-size-xsm;
+
+		@include up(sm) {
+			font-size: $font-size-sm;
+		}
+	}
+}
