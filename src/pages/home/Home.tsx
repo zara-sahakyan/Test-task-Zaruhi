@@ -3,7 +3,6 @@ import ImageSlider from '../../components/imageslider/ImageSlider';
 import LiveChat from '../../components/livechat/LiveChat';
 import InfoSection from '../../components/infosection/InfoSection';
 import SupportSection from '../../components/supportsection/SupportSection';
-import Footer from '../../components/footer/footer';
 
 export function Home() {
     return (
