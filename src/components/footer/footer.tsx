@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
 
             <div className={styles.footer__bottom}>
-                <p>© {new Date().getFullYear()} «Brand» 2022, All Rights Reserved.</p>
+                <p>© «Brand» 2022, All Rights Reserved.</p>
             </div>
         </footer>
     );
