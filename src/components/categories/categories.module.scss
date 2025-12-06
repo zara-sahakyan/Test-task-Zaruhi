@@ -39,6 +39,10 @@
 		padding: 12px;
 		cursor: pointer;
 		z-index: 2;
+		
+		@include down(lg) {
+			top: 15px;
+		}
 
 		i {
 			display: block;
@@ -106,6 +110,10 @@
 			font-size: $font-size-sm;
 			font-weight: $font-weight-bold;
 			align-self: flex-start;
+			
+			@include down(lg) {
+				font-size: $font-size-xsm;
+		    }
 		}
 
 		@include down(md) {
